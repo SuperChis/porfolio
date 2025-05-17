@@ -485,6 +485,7 @@ header {
     display: flex;
     justify-content: space-between;
   }
+}
 
   .popup {
     position: fixed;
@@ -513,4 +514,19 @@ header {
   .hidden {
     display: none;
   }
-}
+  
+  @media (max-width: 768px) {
+    .letter-img,
+    .surprise-img {
+      max-width: 95vw;
+      max-height: 80vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .letter-img,
+    .surprise-img {
+      max-width: 100vw;
+      max-height: 75vh;
+    }
+  }
