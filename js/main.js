@@ -28,3 +28,20 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
   bannerImage.src = images[currentIndex];
 }, 5000); // Thay đổi hình ảnh mỗi 5 giây
+
+document.addEventListener("DOMContentLoaded", function () {
+  const letterPopup = document.getElementById("letterPopup");
+  const hiddenImageContainer = document.getElementById("hiddenImageContainer");
+
+  // Khi click vào thư
+  letterPopup.addEventListener("click", function () {
+    letterPopup.style.display = "none";
+    hiddenImageContainer.classList.remove("hidden");
+  });
+
+  // Khi click vào hình ảnh hiện ra => ẩn lại
+  hiddenImageContainer.addEventListener("click", function () {
+    hiddenImageContainer.classList.add("hidden");
+    letterPopup.style.display = "none";
+  });
+});
